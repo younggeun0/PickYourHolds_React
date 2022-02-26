@@ -2,11 +2,11 @@ import React, { useState, useRef, useLayoutEffect } from "react";
 import Grid from '@mui/material/Grid';
 import Button from "./Button";
 
-interface Size {
+type Size = {
     width:number,
     height:number
 }
-interface Point {
+type Point = {
     x: number,
     y: number,
     isTop: boolean
