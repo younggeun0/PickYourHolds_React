@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 function App() {
     const [ isStarted, setIsStarted ] = useState(false);
 
-    function startPickingHolds() {
+    function startPickingHolds():void {
         setIsStarted(true);
     }
 

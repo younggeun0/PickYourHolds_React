@@ -2,7 +2,7 @@ import React from "react";
 import Grid from '@mui/material/Grid';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-function Main(props) {
+function Main(props: { onStart: React.MouseEventHandler<HTMLButtonElement>; }) {
     return (
         <Grid container justifyContent="center" rowSpacing={2}>
             <Grid item xs={12} className="heading">
