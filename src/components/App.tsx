@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Main from "./Main";
 import PickScreen from "./PickScreen";
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 
 function App() {
-    const [ isStarted, setIsStarted ] = useState(false);
+    const [isStarted, setIsStarted] = useState(false);
 
-    function startPickingHolds():void {
+    const startPickingHolds = useCallback((): void => {
         setIsStarted(true);
-    }
+    }, []);
 
     return (
         <Grid
@@ -16,13 +16,9 @@ function App() {
             direction="column"
             alignItems="center"
             justifyContent="center"
-            style={{ minHeight: '100vh'}}
+            style={{ minHeight: "100vh" }}
         >
-            {
-                (isStarted) ? 
-                <PickScreen /> :
-                <Main onStart={startPickingHolds}/>
-            }
+            {isStarted ? <PickScreen /> : <Main onStart={startPickingHolds} />}
         </Grid>
     );
 }
