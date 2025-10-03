@@ -15,6 +15,7 @@ function PickScreen() {
   const [defaultImage, setDefaultImage] = useState<string>('');
   const [points, setPoints] = useState<Array<Point>>([]);
   const [startPoints, setStartPoints] = useState<number>(-1);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [canvasSize, setCanvasSize] = useState<Size>({
     width: 0,
     height: 0,
@@ -30,16 +31,17 @@ function PickScreen() {
       if (refHiddenInputFile && refHiddenInputFile.current) {
         refHiddenInputFile.current.click();
       }
-    } else {
-      const img = refHiddenImg.current;
-      const canvas = refCanvas.current;
+      return;
+    }
 
-      if (img && canvas) {
-        const ctx = canvas.getContext('2d');
-        if (ctx) {
-          ctx.drawImage(img, 0, 0, canvasSize.width, canvasSize.height);
-          drawPoints();
-        }
+    const img = refHiddenImg.current;
+    const canvas = refCanvas.current;
+
+    if (img && canvas) {
+      const ctx = canvas.getContext('2d');
+      if (ctx) {
+        ctx.drawImage(img, 0, 0, canvasSize.width, canvasSize.height);
+        drawPoints();
       }
     }
   });
@@ -63,6 +65,7 @@ function PickScreen() {
           }
         } while (startHolds < 1 || startHolds > 4);
         setStartPoints(startHolds);
+        setIsLoading(false);
       }
     }
   }, []);
@@ -175,6 +178,7 @@ function PickScreen() {
     setPoints([]);
     setStartPoints(-1);
     setDefaultImage('');
+    setIsLoading(true);
     setCanvasSize({
       width: 0,
       height: 0,
@@ -195,7 +199,13 @@ function PickScreen() {
 
   return (
     <div className="p-4">
-      {defaultImage !== null && (
+      {isLoading && (
+        <div className="flex justify-center items-center h-96">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-500"></div>
+        </div>
+      )}
+
+      {defaultImage !== null && !isLoading && (
         <div className="space-y-6">
           <div className="flex justify-center">
             <canvas
@@ -225,6 +235,7 @@ function PickScreen() {
           </div>
         </div>
       )}
+
       <img
         src={defaultImage}
         className="hidden"
