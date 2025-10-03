@@ -1,26 +1,19 @@
-import React, { useCallback, useState } from "react";
-import Main from "./Main";
-import PickScreen from "./PickScreen";
-import Grid from "@mui/material/Grid";
+import React, { useCallback, useState } from 'react';
+import Main from './Main';
+import PickScreen from './PickScreen';
 
 function App() {
-    const [isStarted, setIsStarted] = useState(false);
+  const [isStarted, setIsStarted] = useState(false);
 
-    const startPickingHolds = useCallback((): void => {
-        setIsStarted(true);
-    }, []);
+  const startPickingHolds = useCallback((): void => {
+    setIsStarted(true);
+  }, []);
 
-    return (
-        <Grid
-            container
-            direction="column"
-            alignItems="center"
-            justifyContent="center"
-            style={{ minHeight: "100vh" }}
-        >
-            {isStarted ? <PickScreen /> : <Main onStart={startPickingHolds} />}
-        </Grid>
-    );
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      {isStarted ? <PickScreen /> : <Main onStart={startPickingHolds} />}
+    </div>
+  );
 }
 
 export default App;

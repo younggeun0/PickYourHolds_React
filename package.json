@@ -1,35 +1,40 @@
 {
-    "name": "pickyourholds_react",
-    "version": "1.1.0",
-    "description": "Web app for climbing training",
-    "main": "src/index.js",
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject"
-    },
-    "keywords": [],
-    "author": "YOUNG OH",
-    "homepage": "https://younggeun0.github.io/projects/react/pickyourholds/",
-    "license": "MIT",
-    "dependencies": {
-        "@emotion/react": "^11.7.1",
-        "@emotion/styled": "^11.6.0",
-        "@mui/icons-material": "^5.4.1",
-        "@mui/material": "^5.4.1",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
-        "react-scripts": "^5.0.0"
-    },
-    "browserslist": [
-        ">0.2%",
-        "not dead",
-        "not ie <= 11",
-        "not op_mini all"
-    ],
-    "devDependencies": {
-        "@types/react": "^17.0.39",
-        "@types/react-dom": "^17.0.11"
-    }
+  "name": "pickyourholds_react",
+  "version": "1.2.0",
+  "description": "Web app for climbing training",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [],
+  "author": "YOUNG OH",
+  "homepage": "https://younggeun0.github.io/projects/react/pickyourholds/",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.8",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.5.1",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.4",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^4.1.8",
+    "vite": "^6.3.5"
+  }
 }
