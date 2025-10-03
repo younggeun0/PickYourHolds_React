@@ -2,7 +2,7 @@
 
 React를 이용한 토이프로젝트
 
-## [ 클라이밍용 찍볼 웹앱 - 바로가기](https://younggeun0.github.io/projects/react/pickyourholds/index.html)
+## [ 클라이밍용 찍볼 웹앱 - 바로가기](https://pick-your-holds.vercel.app/)
 
 > **찍볼 == 찍어서 볼더링**
 
@@ -15,10 +15,6 @@ React를 이용한 토이프로젝트
 5. 하단 메뉴는 순서대로 이전(😅), 초기화(✨), 재촬영(📷), 저장(💾)
 
 ## 앱 이미지
-
-<p align="center">
-    <img src="https://github.com/younggeun0/younggeun0.github.io/raw/master/_posts/img/toyProjects/pyh/pyh03.png?raw=true">
-<p>
 
 <p align="center">
     <img src="https://github.com/younggeun0/younggeun0.github.io/raw/master/_posts/img/toyProjects/pyh/pyh04.png?raw=true">
