@@ -7,22 +7,31 @@ function Main({
 }) {
   return (
     <div className="flex flex-col items-center justify-center space-y-10">
-      <div className="heading">
+      <div className="text-5xl">
         <span className="text-blue-400">PICK</span>
         <span className="text-green-400">YOUR</span>
         <span className="text-red-400">HOLDS</span>
       </div>
       <div className="flex space-x-4">
-        <img className="climber" src="img/climber1.png" alt="climber1" />
-        <img className="climber" src="img/climber2.png" alt="climber2" />
+        <img
+          className="w-32 rounded-lg"
+          src="img/climber1.png"
+          alt="climber1"
+        />
+        <img
+          className="w-32 rounded-lg"
+          src="img/climber2.png"
+          alt="climber2"
+        />
       </div>
-      <div>
-        <button className="btn-start" onClick={onStart}>
-          START
-        </button>
-      </div>
+      <button
+        className="font-concert text-6xl px-12 border-none rounded-lg bg-gray-300 text-gray-200 cursor-pointer appearance-none hover:text-white"
+        onClick={onStart}
+      >
+        START
+      </button>
       <div
-        className="flex items-center cursor-pointer signature"
+        className="flex items-center cursor-pointer text-2xl no-underline text-gray-100 px-1"
         onClick={() => {
           location.href = 'https://github.com/younggeun0';
         }}

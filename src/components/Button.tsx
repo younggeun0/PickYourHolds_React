@@ -14,7 +14,7 @@ function Button({
       className="flex-1 min-w-0 flex items-center justify-center cursor-pointer"
       onClick={onClick}
     >
-      <img className="btn-emoji w-12" src={imgSrc} alt={name} />
+      <img className="w-12" src={imgSrc} alt={name} />
     </div>
   );
 }

@@ -9,33 +9,3 @@
     @apply bg-gray-800 font-concert text-center;
   }
 }
-
-@layer components {
-  .canvas-style {
-    @apply rounded-lg border-2 border-gray-400;
-  }
-
-  .signature {
-    @apply text-2xl no-underline text-gray-100 px-1 cursor-pointer;
-  }
-
-  .heading {
-    @apply text-5xl;
-  }
-
-  .climber {
-    @apply w-32 rounded-lg;
-  }
-
-  .btn-start {
-    @apply font-concert text-6xl px-12 border-none rounded-lg bg-purple-400 text-white cursor-pointer appearance-none hover:bg-purple-500;
-  }
-
-  .btn-emoji {
-    @apply w-12;
-  }
-
-  .disable-dbl-tap-zoom {
-    touch-action: manipulation;
-  }
-}

@@ -209,7 +209,7 @@ function PickScreen() {
         <div className="space-y-6">
           <div className="flex justify-center">
             <canvas
-              className="disable-dbl-tap-zoom canvas-style"
+              className="touch-action-manipulation rounded-lg border-2 border-gray-400"
               width={canvasSize.width}
               height={canvasSize.height}
               onClick={event => {
