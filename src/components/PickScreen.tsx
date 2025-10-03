@@ -200,8 +200,11 @@ function PickScreen() {
   return (
     <div className="p-4">
       {isLoading && (
-        <div className="flex justify-center items-center h-96">
+        <div className="flex flex-col justify-center items-center h-96 space-y-4">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-500"></div>
+          <p className="text-gray-300 text-center mt-4">
+            이미지를 선택하지 않고 닫은 경우 새로고침 부탁드립니다.
+          </p>
         </div>
       )}
 
