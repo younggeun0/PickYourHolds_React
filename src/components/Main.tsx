@@ -25,13 +25,13 @@ function Main({
         />
       </div>
       <button
-        className="font-concert text-6xl px-12 border-none rounded-lg bg-gray-300 text-gray-200 cursor-pointer appearance-none hover:text-white"
+        className="w-full font-concert text-6xl text-gray-200 cursor-pointer appearance-none hover:text-white"
         onClick={onStart}
       >
         START
       </button>
       <div
-        className="flex items-center cursor-pointer text-2xl no-underline text-gray-100 px-1"
+        className="flex items-center cursor-pointer text-2xl no-underline text-gray-200 px-1 hover:text-white"
         onClick={() => {
           location.href = 'https://github.com/younggeun0';
         }}
